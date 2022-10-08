@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebDeveloper :: Urian Viera</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="switch.css">
+  <style>
+    .titulo {
+      text-align: center;
+      font-weight: 800;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nuevaClase {
+      background-color: rgb(230, 230, 4);
+    }
+
+    .suscrib {
+      font-weight: 900;
+      color: crimson;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-12">
+
+        <h1 class="soyH1 mb-5" style="text-align:center; margin-top:50px; font-weight: 800;font-size: 50px;">
+          🔥NO olvidar <br> classList - className y toggle 😲
+        </h1>
+
+        <div class="row justify-content-md-center">
+          <div class="col-md-12 mb-3">
+            <h2 class="text-center titulo">
+              JAVASCRIPT es lo MÁXIMO 💪
+            </h2>
+          </div>
+
+          <input type="checkbox" id="switch" /><label for="switch"></label>
+
+          <p class="text-center mt-4 resp" style="font-weight:800;">Switch: </p>
+
+          <h2 class="text-center titulo toggleTitle">
+            JAVASCRIPT
+          </h2>
+
+          <h3 class="suscrib center mt-3" id="sucribete">Suscribete Amigo..!</h3>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let miH1 = document.querySelector('.soyH1');
+    miH1.addEventListener('click', () => {
+      console.log(miH1.classList);
+      console.log(miH1.className);
+    });
+
+
+    let titulo = document.querySelector('.titulo');
+    titulo.addEventListener('click', () => {
+      console.log(titulo.classList);
+      titulo.classList.add('nuevaClase');
+    })
+
+
+    /* toggle */
+    let miDiv = document.querySelector('.toggleTitle');
+    miDiv.addEventListener('click', () => {
+      console.log(miDiv.classList);
+      console.log(miDiv.classList.toggle('nuevaClase'));
+      console.log(miDiv.classList);
+    });
+
+
+    let miSwitch = document.querySelector('#switch');
+    miSwitch.addEventListener('click', () => {
+      console.log(miSwitch.classList);
+      console.log(miSwitch.value)
+      console.log(miSwitch.classList.toggle('nuevaClase'));
+
+      console.log(miSwitch.checked)
+      let resultSwith = miSwitch.checked;
+      let respuestaSwith = resultSwith ? 'Activo' : 'Inactivo';
+
+      let respuesta = document.querySelector('.resp').innerHTML = respuestaSwith;
+
+    }); 
+  </script>
+
+
+</body>
+
+</html>

@@ -31,6 +31,12 @@
     .center {
       text-align: center;
     }
+    .soyH1{
+      text-align:center;
+      margin-top:50px; 
+      font-weight: 800;
+      font-size: 50px;
+    }
   </style>
 </head>
 
@@ -42,7 +48,7 @@
     <div class="row justify-content-md-center">
       <div class="col-md-12">
 
-        <h1 class="soyH1 mb-5" style="text-align:center; margin-top:50px; font-weight: 800;font-size: 50px;">
+        <h1 class="soyH1 mb-5">
           🔥NO olvidar <br> classList - className y toggle 😲
         </h1>
 
@@ -82,22 +88,12 @@
     titulo.addEventListener('click', () => {
       console.log(titulo.classList);
       titulo.classList.add('nuevaClase');
-    })
-
-
-    /* toggle */
-    let miDiv = document.querySelector('.toggleTitle');
-    miDiv.addEventListener('click', () => {
-      console.log(miDiv.classList);
-      console.log(miDiv.classList.toggle('nuevaClase'));
-      console.log(miDiv.classList);
     });
 
-
+    /* toggle - switch*/
     let miSwitch = document.querySelector('#switch');
     miSwitch.addEventListener('click', () => {
       console.log(miSwitch.classList);
-      console.log(miSwitch.value)
       console.log(miSwitch.classList.toggle('nuevaClase'));
 
       console.log(miSwitch.checked)
@@ -107,6 +103,15 @@
       let respuesta = document.querySelector('.resp').innerHTML = respuestaSwith;
 
     }); 
+
+    /* toggle en div */
+    let miDiv = document.querySelector('.toggleTitle');
+    miDiv.addEventListener('click', () => {
+      console.log(miDiv.classList);
+      console.log(miDiv.classList.toggle('nuevaClase'));
+      console.log(miDiv.classList);
+    });
+
   </script>
 
 <!---No olvides suscribirme y comentar, tu apoyo vale Oro 💪 -->
